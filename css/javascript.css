@@ -1,0 +1,288 @@
+body{
+    word-break: break-all;
+    white-space: normal;
+}
+form{
+    position: relative;
+    background-color: transparent;
+    width: 80%;
+    padding: 3em;
+    height: 600px;
+    border-radius: 20px;
+    
+    
+   
+   
+    text-align: center;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    >p{
+        font-weight: 500;
+    color: #fff;
+    opacity: 0.7;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 60px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+    input{
+      
+        height: 40px;
+        background: transparent;
+        
+        padding: 1em;
+        margin-bottom: 2em;
+        border: none;
+        border-left: 1px solid #ffffff4d;
+        border-top: 1px solid #ffffff4d;
+        border-radius: 5000px;
+       
+        box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+       
+        font-family: Montserrat, sans-serif;
+        font-weight: 500;
+        transition: all 0.2s ease-in-out;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        
+        &:hover {
+          background-color: rgba(255,255,255,0.1);
+          box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+
+        }
+       
+        
+    }
+    [type="submit"]{
+       
+  width: 150px;
+  height: 60px;
+  
+
+
+  
+  
+  &:hover {
+    cursor: pointer;
+  }
+    }
+
+    &[type="button"] {
+      
+        width: 150px;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+        &:hover {
+          cursor: pointer;
+        }
+        
+        &:active {
+          background: #ffffff33;
+        }
+      }
+    
+    
+    &:hover {
+      margin: 4px;
+    }
+    ::placeholder {
+        font-family: Montserrat, sans-serif;
+        font-weight: 400;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+      }
+    
+    
+   
+}
+.span{
+
+    transition: 1s;
+        display: flex;
+        width: 0;
+        height: 6px;
+        border-radius: 5px;
+        
+}
+.mai{
+
+    transition: 1s;
+        display: flex;
+        width: 40%;
+        height: 60px;
+        border-radius: 5px;
+}
+.num{
+
+    transition: 1s;
+        display: flex;
+      width: 40%;
+        height: 60px;
+        border-radius: 5px;
+}
+.loginform{
+  position: relative;
+  background-color: transparent;
+  width: 80%;
+  padding: 3em;
+  height: 600px;
+  border-radius: 20px;
+  
+  
+ 
+ 
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  >p{
+      font-weight: 500;
+  color: #fff;
+  opacity: 0.7;
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 60px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  }
+  input{
+    
+      height: 40px;
+      background: transparent;
+      
+      padding: 1em;
+      margin-bottom: 2em;
+      border: none;
+      border-left: 1px solid rgba(255,255,255,0.3);
+      border-top: 1px solid rgba(255,255,255,0.3);
+      border-radius: 5000px;
+     
+      box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+     
+      font-family: Montserrat, sans-serif;
+      font-weight: 500;
+      transition: all 0.2s ease-in-out;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      
+      &:hover {
+        background-color: rgba(255,255,255,0.1);
+        box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+
+      }
+     
+      
+  }
+  input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea {
+  padding: 0.5rem;
+  }
+  select:focus,
+  textarea{
+    font-size: 16px;
+  }
+  [type="submit"]{
+     
+width: 150px;
+height: 60px;
+
+
+
+
+
+&:hover {
+  cursor: pointer;
+}
+  }
+
+  &[type="button"] {
+    
+      width: 150px;
+      font-size: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;        
+      &:hover {
+        cursor: pointer;
+      }
+      
+      &:active {
+        background: rgba(255,255,255,0.2);
+      }
+    }
+  
+  
+  &:hover {
+    margin: 4px;
+  }
+  ::placeholder {
+      font-family: Montserrat, sans-serif;
+      font-weight: 400;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    }
+  
+  
+ 
+}
+
+.popup{
+    
+    
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 1s;
+ 
+
+}
+.hide{
+  opacity: 0;
+  transform: translate(-50%,-50%) scale(0);
+
+} 
+.popuplogin{
+    
+    
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 1s;
+  display: none;
+ 
+
+}
+.popuplogin:not(.hidelogin) {
+  display: block;
+}
+.hidelogin {
+  opacity: 0;
+  transform: translate(-50%,-50%) scale(0);
+
+}
+
+
+
+
+
