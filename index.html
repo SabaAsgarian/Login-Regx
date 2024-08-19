@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1, user-scalable=0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/fontello.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <link rel="stylesheet" href="css/javascript.css">
+    <link rel="stylesheet" href="css/output.css">
+</head>
+
+<body class="text-[#fff] bg-[#00cc8f] w-full h-[120vh] xl:overflow-hidden  capitalize">
+    <section class="row w-full h-[100vh]">
+        <div class="row w-[100%] h-[40%] xl:w-[40%] xl:h-[120vh] bg-[#029e71]">
+            <div class="row w-full h-[20%] flex  items-center ml-[20%]">
+                <i class=" icon-star-6 text-[28px] rotate-[20deg]"> </i>
+                <h1 class="font-mb text-[28px] pl-[3%] pt-[1%]">Bright</h1>
+            </div>
+            <figure class="w-full h-[80%] relative">
+                <img class="ml-[20%] h-[100%] xl:scale-125" src="img/undraw_new_ideas_jdea.svg" alt="">
+                <figcaption
+                    class="absolute top-0 left-[40%] md:left-[30%] xl:top-[10%] w-[30%] xl:w-auto *:text-[8px] xl:left-[70%] *:xl:text-[13px] *:text-[#d65252] font-mb font-extrabold">
+
+                    <span class="fname w-full" style="display: none;">(Your FirstName is Incorrect!!It should contain
+                        more
+                        than 3 charectors no symbol no numbers.)</span>
+                    <span class="lname w-full" style="display: none;">(Your LastName is Incorrect!!It should contain
+                        more
+                        than 3 charectors no symbols no numbers.)</span>
+                    <span class="user w-full" style="display: none;">(Your UserName is Incorrect!! it should contain 1
+                        uppercase and 1 number)</span>
+                    <span class="mai w-full" style="display: none;">(Your Mail is Incorrect!!)</span>
+                    <span class="num w-full" style="display: none;">(Your Mobile Number is Incorrect!!)</span>
+                    <span class="pas w-full" style="display: none;">(Your password is Incorrect!! it
+                        should contain atleast 1 uppercase 1 number 1 symbol and more than 8 charectors)</span>
+
+                </figcaption>
+            </figure>
+        </div>
+        <div class="row w-full  h-[60%] xl:w-[60%] xl:h-[100vh] flex justify-center items-center  relative">
+            <div class="row w-full h-[20%]  justify-around pt-[8%] loginSec">
+                <p class="text-[#54ffcb]">Already Have Account? </p>
+                <i class=" icon-right text-[#54ffcb]"></i>
+                <h4 class="font-mb font-extrabold cursor-pointer login">Log In</h4>
+
+
+            </div>
+            <div class="row w-full h-[20%]  justify-around pt-[8%] absolute top-0 left-0 signupSec">
+                <p class="text-[#54ffcb]">Don't Have Account? </p>
+                <i class=" icon-right text-[#54ffcb]"></i>
+                <h4 class="font-mb font-extrabold cursor-pointer signup">Sign Up</h4>
+
+
+            </div>
+            <form name="regForm" onsubmit="return myVal()"
+                class="flex flex-wrap form  h-[80%] *:bg-transparent *:rounded-2xl *:p-[.5em] *:border-l-1 *:border-t-1 border-[#ffffff4d]"
+                id="yourFormId">
+                <h4 style="color: #fff;" class="w-full">Welcome</h4>
+                <p class="font-mr font-extralight w-full">Enter your details below</p>
+                <input type="text" placeholder="First Name " id="fname" name="fname" class="w-[40%] ml-[7%]">
+                <input type="text" placeholder="Last Name " id="lname" name="lname" class="w-[40%] ml-[10%]">
+
+                <input type="text" placeholder="UserName" id="user" name="user" class="w-[40%] ml-[7%]">
+                <input type="text" placeholder="E-mail" name="email" id="email" class="w-[40%] ml-[10%]"><br>
+
+                <input type="text" placeholder="Mobile Number" name="mobile" id="mobile" class="w-[40%] ml-[7%]"><br>
+
+                <input type="text" placeholder="Password" name="Password" id="pass" class="w-[40%] ml-[10%]"> <br>
+                <span class="span w-[40%]" id="passwordStrengthMeter"></span><br>
+                <div class="row w-full flex justify-center items-center *:bg-[#ffffff1b]">
+                    <input type="submit" value="Sign Up" class="sub flex justify-center items-center ml-[2%]"
+                        id="signup">
+                </div>
+            </form>
+            <form name="loginForm" onsubmit="return myLoginVal(event)"
+                class="row loginform  h-[80%] absolute top-[20%] left-[10%]  *:bg-transparent *:rounded-xl *:p-[1em]"
+                id="loginForm">
+                <h4 style="color: #fff;" class="w-full">Welcome</h4>
+                <p class="font-mr font-extralight w-full">Enter your details below</p>
+                <input type="text" placeholder="UserName" id="userlogin" name="userlogin"
+                    class="w-[40%] ml-[7%] *:border-l-1 *:border-t-1 border-[#ffffff4d]">
+                <input type="text" placeholder="Password" name="Passwordlogin" id="passlogin"
+                    class="w-[40%] ml-[10%] *:border-l-1 *:border-t-1 border-[#ffffff4d]">
+                <br>
+                <div class="row w-full flex justify-center items-center *:bg-[#ffffff33]">
+                    <input type="submit" value="Sign In" class="sub flex justify-center items-center ml-[2%]"
+                        id="loginsubmit">
+                </div>
+                <span class="user w-full font-mb font-extrabold" style="display: none;">(Your UserName is Incorrect!! it
+                    should contain 1 uppercase and 1 number)</span>
+                <span class="pas w-full font-mb font-extrabold" style="display: none;">(Your password is Incorrect!! it
+                    should contain atleast 1 uppercase 1 number 1 symbol and more than 8 charectors)</span>
+            </form>
+        </div>
+
+    </section>
+    <!-- popup signup -->
+    <section class="w-full h-[800px] flex justify-center items-center *:font-mr ">
+        <div class="row flex justify-center items-center">
+            <div id="blur-overlay" class="fixed inset-0 backdrop-blur-3xl bg-black bg-opacity-25 hidden"></div>
+
+            <div
+                class="popup hide justify-center items-center flex w-[80%] h-[80%] lg:w-[50%] lg:h-[60%] *:text-center bg-[#00cc8f] bg-bg bg-no-repeat bg-center *:text-black">
+                <section class="flex w-full h-full border-white border-[5px] rounded-lg row">
+                    <span
+                        class="cursor-pointer bg-white !text-black absolute bottom-0 right-[10%] md:top-0 md:right-[20%] text-[15px] w-[20px] h-[20px] md:w-[25px] md:h-[25px] flex justify-center items-center text-center rounded-full"
+                        id="cl0se">X</span>
+                    <h2 class="w-full text-[20px] font-extrabold">Welcome To your Account here your informations:</h2>
+                        <br>
+
+                        <h3 id="fn" class="w-full">First Name</h3> <br>
+
+
+                        <h3 id="ln" class="w-full">Last Name</h3><br>
+                        <h3 id="un" class="w-full">User Name</h3><br>
+                        <h3 id="em" class="w-full">E-mail</h3><br>
+                        <h3 id="m" class="w-full">Mobile Number</h3><br>
+                        <h3 id="ps" class="w-full">Password</h3><br>
+
+                </section>
+
+            </div>
+        </div>
+    </section>
+    <!-- popup login -->
+    <section class="w-full h-[800px] flex justify-center items-center *:font-mr ">
+        <div class="row flex justify-center items-center">
+            <div id="blur-overlaylogin" class="fixed inset-0 backdrop-blur-3xl bg-black bg-opacity-20 hidden"></div>
+
+            <div
+                class="popuplogin hidelogin justify-center items-center flex w-[80%] h-[80%] lg:w-[50%] lg:h-[60%] *:text-center bg-[#00cc8f] bg-bg bg-no-repeat bg-center *:text-black">
+                <section class="flex w-full h-full border-white border-[5px] rounded-lg row">
+                    <span
+                        class="cursor-pointer bg-white !text-black absolute bottom-0 right-[10%] md:top-0 md:right-[20%] text-[15px] w-[20px] h-[20px] md:w-[25px] md:h-[25px] flex justify-center items-center text-center rounded-full"
+                        id="cl0selogin">X</span>
+                    <h2 class="w-full text-[20px] font-extrabold">Welcome To your Account here your informations:</h1>
+                        <br>
+
+
+
+
+                        <h3 id="unlogin" class="w-full">User Name</h3><br>
+
+
+                        <h3 id="pslogin" class="w-full">Password</h3><br>
+
+                </section>
+
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    const fnameInput = document.getElementById('fname');
+    const lnameInput = document.getElementById('lname');
+    const userInput = document.getElementById('user');
+    const emailInput = document.getElementById('email');
+    const mobileInput = document.getElementById('mobile');
+    const fnameError = document.querySelector('.fname');
+    const lnameError = document.querySelector('.lname');
+    const userError = document.querySelector('.user');
+    const emailError = document.querySelector('.mai');
+    const mobileError = document.querySelector('.num');
+    const userLoginInput = document.getElementById('userlogin');
+    const passLoginInput = document.getElementById('passlogin');
+    const userLoginError = document.querySelector('.user');
+    const passLoginError = document.querySelector('.pas');
+    const inpformReg = document.querySelectorAll('.form>input')
+    const inpformlogin = document.querySelectorAll('.loginform>input')
+    const signup = document.getElementById('signup');
+    const loginsubmit = document.getElementById('loginsubmit');
+    const fn = document.getElementById('fn');
+    const ln = document.getElementById('ln');
+    const un = document.getElementById('un');
+    const em = document.getElementById('em');
+    const m = document.getElementById('m');
+    const ps = document.getElementById('ps');
+    const popup = document.querySelector('.popup')
+    const cl0se = document.getElementById('cl0se');
+    const cl0selogin = document.getElementById('cl0selogin');
+    const popuplogin = document.querySelector('.popuplogin')
+    const unlogin = document.getElementById('unlogin');
+    const pslogin = document.getElementById('pslogin');
+
+
+    let power = 0; // declare power variable globally
+
+    const passwordInput = document.getElementById('pass');
+    const passwordStrengthMeter = document.getElementById('passwordStrengthMeter');
+
+    passwordInput.addEventListener('input', function () {
+        let password = passwordInput.value;
+        power = 0;
+        if (password.length > 8) power++;
+        if (/[a-z]/.test(password)) power++;
+        if (/[A-Z]/.test(password)) power++;
+        if (/[0-9]/.test(password)) power++;
+        if (/[!@#$%^&*-+'"<>?=~`.,;:|(_)" "]/.test(password)) power++;
+
+        switch (power) {
+            case 0:
+                passwordStrengthMeter.style.width = '0';
+                passwordStrengthMeter.style.background = 'black';
+                break;
+            case 1:
+                passwordStrengthMeter.style.width = '20%';
+                passwordStrengthMeter.style.background = 'red';
+                break;
+            case 2:
+                passwordStrengthMeter.style.width = '40%';
+                passwordStrengthMeter.style.background = 'orange';
+                break;
+            case 3:
+                passwordStrengthMeter.style.width = '60%';
+                passwordStrengthMeter.style.background = 'yellow';
+                break;
+            case 4:
+                passwordStrengthMeter.style.width = '80%';
+                passwordStrengthMeter.style.background = 'yellowgreen';
+                break;
+            case 5:
+                passwordStrengthMeter.style.width = '100%';
+                passwordStrengthMeter.style.background = 'aqua';
+                break;
+        }
+    });
+
+    function myVal() {
+
+
+        let fname = fnameInput.value;
+        let lname = lnameInput.value;
+        let user = userInput.value;
+        let email = emailInput.value;
+        let mobile = mobileInput.value;
+
+        const fnameRegex = /^[a-zA-Z]{3,}$/; // at least 3 characters, only letters
+        const lnameRegex = /^[a-zA-Z]{3,}$/; // at least 3 characters, only letters
+        const userRegex = /^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{3,}$/; // at least 3 characters, at least one uppercase, one number, only letters and numbers
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const mobileRegex = /^\d{11}$/; // assuming 11-digit mobile number
+
+        let isValid = true;
+
+        if (!fnameRegex.test(fname)) {
+            fnameError.style.display = 'block';
+            isValid = false;
+        } else {
+            fnameError.style.display = 'none';
+        }
+
+        if (!lnameRegex.test(lname)) {
+            lnameError.style.display = 'block';
+            isValid = false;
+        } else {
+            lnameError.style.display = 'none';
+        }
+
+        if (!userRegex.test(user)) {
+            userError.style.display = 'block';
+            isValid = false;
+        } else {
+            userError.style.display = 'none';
+        }
+
+        if (!emailRegex.test(email)) {
+            emailError.style.display = 'block';
+            isValid = false;
+        } else {
+            emailError.style.display = 'none';
+        }
+
+        if (!mobileRegex.test(mobile)) {
+            mobileError.style.display = 'block';
+            isValid = false;
+        } else {
+            mobileError.style.display = 'none';
+        }
+
+        if (power < 5) {
+            isValid = false;
+        }
+
+        if (!isValid) {
+            event.preventDefault();
+        }
+        return isValid;
+    }
+
+    ///////////////////////////////////////////////////
+
+    function myLoginVal(event) {
+
+
+
+        let userLogin = userLoginInput.value;
+        let passLogin = passLoginInput.value;
+
+        const userLoginRegex = /^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{3,}$/; // at least 3 characters, at least one uppercase, one number, only letters and numbers
+        const passLoginRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@$%*#?&])[A-Za-z0-9@$%*#?&]{8,}$/; // at least 8 characters, at least one uppercase, one lowercase, one number, one special character
+
+        let isValid = true;
+
+        if (!userLoginRegex.test(userLogin)) {
+            userLoginError.style.display = 'block';
+            isValid = false;
+        } else {
+            userLoginError.style.display = 'none';
+        }
+
+        if (!passLoginRegex.test(passLogin)) {
+            passLoginError.style.display = 'block';
+            isValid = false;
+        } else {
+            passLoginError.style.display = 'none';
+        }
+
+        if (!isValid) {
+            event.preventDefault();
+        }
+        return isValid;
+
+    }
+
+    ///////////////// Log in////////////////////////
+    ////////////////////////////////
+    const loginButton = document.querySelector('.login');
+    const signupButton = document.querySelector('.signup');
+    const loginForm = document.querySelector('.loginform');
+    const regForm = document.querySelector('.form');
+    const loginSec = document.querySelector('.loginSec');
+    const signupSec = document.querySelector('.signupSec');
+
+    loginButton.addEventListener('click', () => {
+        loginForm.style.display = 'flex';
+        loginForm.style.transform = 'scale(1)';
+        loginForm.style.transition = 'transform 0.5s ease-in-out';
+        regForm.style.display = 'none';
+        loginSec.style.display = 'none';
+        signupSec.style.display = 'flex';
+        signupSec.style.transform = 'scale(1)';
+        signupSec.style.transition = 'transform 0.5s ease-in-out';
+    });
+
+    signupButton.addEventListener('click', () => {
+        regForm.style.display = 'flex';
+        regForm.style.transform = 'scale(1)';
+        regForm.style.transition = 'transform 0.5s ease-in-out';
+        loginForm.style.display = 'none';
+        signupSec.style.display = 'none';
+        loginSec.style.display = 'flex';
+        loginSec.style.transform = 'scale(1)';
+        loginSec.style.transition = 'transform 0.5s ease-in-out';
+    });
+
+    // Initially set the forms to scale(0) and display none
+    loginForm.style.display = 'none';
+    loginForm.style.transform = 'scale(0)';
+
+
+    signupSec.style.display = 'none';
+    signupSec.style.transform = 'scale(0)';
+    
+
+    function showSignupPopup(firstName, lastName, username, email, phone, password) {
+    const popupContent = `
+        <h2 class='w-full text-center text-2xl font-bold'>Welcome dear ${firstName}, Congrats!!Your Account has been created!</h2>
+        <section class='border-1 border-black w-[50%] h-[50%] flex flex-wrap items-center justify-center '>
+            <p class='w-full text-center text-xl font-bold'>First Name: ${firstName}</p>
+            <p class='w-full text-center text-xl font-bold'>Last Name: ${lastName}</p>
+            <p class='w-full text-center text-xl font-bold'>User Name: ${username}</p>
+            <p class='w-full text-center text-xl font-bold'>Email: ${email}</p>
+            <p class='w-full text-center text-xl font-bold'>Mobile Number: ${phone}</p>
+            <p class='w-full text-center text-xl font-bold'>Password: ${password}</p>
+        </section>
+        <span id="cl0se" class="cursor-pointer bg-white !text-black absolute top-2 right-2 text-[15px] w-[20px] h-[20px] flex justify-center items-center text-center rounded-full">X</span>
+    `;
+
+    document.querySelector('.popup section').innerHTML = popupContent;
+    popup.classList.remove('hide');
+    document.getElementById('blur-overlay').classList.remove('hidden');
+}
+
+function hideSignupPopup() {
+    popup.classList.add('hide');
+    document.getElementById('blur-overlay').classList.add('hidden');
+}
+
+document.addEventListener('click', function(event) {
+    if (event.target && event.target.id === 'cl0se') {
+        hideSignupPopup();
+    }
+});
+
+signup.addEventListener('click', (event) => {
+    event.preventDefault();
+    if (myVal()) {
+        const firstName = fnameInput.value;
+        const lastName = lnameInput.value;
+        const phone = mobileInput.value;
+        const email = emailInput.value;
+        const username = userInput.value;
+        const password = passwordInput.value;
+        
+        showSignupPopup(firstName, lastName, username, email, phone, password);
+    }
+});
+    
+    
+    
+    // ... existing code ...
+    function showLoginPopup(username, password) {
+    const popupContent = `
+        <h2 class='w-full text-center text-2xl font-bold'>Welcome dear ${username}, You have successfully logged in!</h2>
+        <section class=' w-[50%] h-[50%] flex flex-wrap items-center justify-start *:items-center *:justify-center '>
+            <p class='w-full text-center text-xl font-bold'>User Name: ${username}</p>
+            <p class='w-full text-center text-xl font-bold'>Password: ${password}</p>
+        </section>
+        <span id="cl0selogin" class="cursor-pointer bg-white !text-black absolute top-2 right-2 text-[15px] w-[20px] h-[20px] flex justify-center items-center text-center rounded-full">X</span>
+    `;
+
+    const popupElement = document.querySelector('.popuplogin');
+    popupElement.querySelector('section').innerHTML = popupContent;
+    popupElement.classList.remove('hidelogin');
+
+    document.getElementById('blur-overlaylogin').classList.remove('hidden');
+}
+
+function hideLoginPopup() {
+    const popupElement = document.querySelector('.popuplogin');
+    popupElement.classList.add('hidelogin');
+    document.getElementById('blur-overlaylogin').classList.add('hidden');
+}
+
+
+document.addEventListener('click', function(event) {
+    if (event.target && event.target.id === 'cl0selogin') {
+        hideLoginPopup();
+    }
+});
+
+loginsubmit.addEventListener('click', (event) => {
+    event.preventDefault();
+    if (myLoginVal(event)) {
+        const username = userLoginInput.value;
+        const password = passLoginInput.value;
+        showLoginPopup(username, password);
+    }
+});
+
+// ا
+window.addEventListener('load', () => {
+    hideLoginPopup();
+    hideSignupPopup();
+});
+
+
+</script>
+
+</html>
