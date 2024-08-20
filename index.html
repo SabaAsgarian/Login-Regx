@@ -7,7 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/fontello.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
     <link rel="stylesheet" href="css/javascript.css">
     <link rel="stylesheet" href="css/output.css">
 </head>
@@ -103,27 +104,28 @@
             <div id="blur-overlay" class="fixed inset-0 backdrop-blur-3xl bg-black bg-opacity-25 hidden"></div>
 
             <div
-                class="popup hide justify-center items-center flex w-[80%] h-[80%] lg:w-[50%] lg:h-[60%] *:text-center bg-[#00cc8f] bg-bg bg-no-repeat bg-center *:text-black">
+                class="popup hide justify-center items-center flex w-[80%] h-fit lg:w-[50%] lg:h-fit *:text-center bg-[#00cc8f] bg-bg bg-no-repeat bg-center *:text-black">
                 <section class="flex w-full h-full border-white border-[5px] rounded-lg row">
                     <span
                         class="cursor-pointer bg-white !text-black absolute bottom-0 right-[10%] md:top-0 md:right-[20%] text-[15px] w-[20px] h-[20px] md:w-[25px] md:h-[25px] flex justify-center items-center text-center rounded-full"
                         id="cl0se">X</span>
                     <h2 class="w-full text-[20px] font-extrabold">Welcome To your Account here your informations:</h2>
-                        <br>
+                    <br>
 
-                        <h3 id="fn" class="w-full">First Name</h3> <br>
+                    <h3 id="fn" class="w-full">First Name</h3> <br>
 
 
-                        <h3 id="ln" class="w-full">Last Name</h3><br>
-                        <h3 id="un" class="w-full">User Name</h3><br>
-                        <h3 id="em" class="w-full">E-mail</h3><br>
-                        <h3 id="m" class="w-full">Mobile Number</h3><br>
-                        <h3 id="ps" class="w-full">Password</h3><br>
+                    <h3 id="ln" class="w-full">Last Name</h3><br>
+                    <h3 id="un" class="w-full">User Name</h3><br>
+                    <h3 id="em" class="w-full">E-mail</h3><br>
+                    <h3 id="m" class="w-full">Mobile Number</h3><br>
+                    <h3 id="ps" class="w-full">Password</h3><br>
 
                 </section>
 
             </div>
         </div>
+
     </section>
     <!-- popup login -->
     <section class="w-full h-[800px] flex justify-center items-center *:font-mr ">
@@ -131,7 +133,7 @@
             <div id="blur-overlaylogin" class="fixed inset-0 backdrop-blur-3xl bg-black bg-opacity-20 hidden"></div>
 
             <div
-                class="popuplogin hidelogin justify-center items-center flex w-[80%] h-[80%] lg:w-[50%] lg:h-[60%] *:text-center bg-[#00cc8f] bg-bg bg-no-repeat bg-center *:text-black">
+                class="popuplogin hidelogin justify-center items-center flex w-[80%] h-fit lg:w-[50%] lg:h-fit *:text-center bg-[#00cc8f] bg-bg bg-no-repeat bg-center *:text-black">
                 <section class="flex w-full h-full border-white border-[5px] rounded-lg row">
                     <span
                         class="cursor-pointer bg-white !text-black absolute bottom-0 right-[10%] md:top-0 md:right-[20%] text-[15px] w-[20px] h-[20px] md:w-[25px] md:h-[25px] flex justify-center items-center text-center rounded-full"
@@ -363,12 +365,15 @@
 
     signupSec.style.display = 'none';
     signupSec.style.transform = 'scale(0)';
-    
+
 
     function showSignupPopup(firstName, lastName, username, email, phone, password) {
-    const popupContent = `
+        const popupContent = `
+          <figure class="w-full h-fit flex justify-center items-center">
+            <img class="w-[50%] h-[50%]" src="img/wlc.gif" alt="">
+            </figure>
         <h2 class='w-full text-center text-2xl font-bold'>Welcome dear ${firstName}, Congrats!!Your Account has been created!</h2>
-        <section class='border-1 border-black w-[50%] h-[50%] flex flex-wrap items-center justify-center '>
+        <section class='row w-full h-fit flex flex-wrap items-center justify-center p-[10%]'>
             <p class='w-full text-center text-xl font-bold'>First Name: ${firstName}</p>
             <p class='w-full text-center text-xl font-bold'>Last Name: ${lastName}</p>
             <p class='w-full text-center text-xl font-bold'>User Name: ${username}</p>
@@ -379,83 +384,86 @@
         <span id="cl0se" class="cursor-pointer bg-white !text-black absolute top-2 right-2 text-[15px] w-[20px] h-[20px] flex justify-center items-center text-center rounded-full">X</span>
     `;
 
-    document.querySelector('.popup section').innerHTML = popupContent;
-    popup.classList.remove('hide');
-    document.getElementById('blur-overlay').classList.remove('hidden');
-}
-
-function hideSignupPopup() {
-    popup.classList.add('hide');
-    document.getElementById('blur-overlay').classList.add('hidden');
-}
-
-document.addEventListener('click', function(event) {
-    if (event.target && event.target.id === 'cl0se') {
-        hideSignupPopup();
+        document.querySelector('.popup section').innerHTML = popupContent;
+        popup.classList.remove('hide');
+        document.getElementById('blur-overlay').classList.remove('hidden');
     }
-});
 
-signup.addEventListener('click', (event) => {
-    event.preventDefault();
-    if (myVal()) {
-        const firstName = fnameInput.value;
-        const lastName = lnameInput.value;
-        const phone = mobileInput.value;
-        const email = emailInput.value;
-        const username = userInput.value;
-        const password = passwordInput.value;
-        
-        showSignupPopup(firstName, lastName, username, email, phone, password);
+    function hideSignupPopup() {
+        popup.classList.add('hide');
+        document.getElementById('blur-overlay').classList.add('hidden');
     }
-});
-    
-    
-    
+
+    document.addEventListener('click', function (event) {
+        if (event.target && event.target.id === 'cl0se') {
+            hideSignupPopup();
+        }
+    });
+
+    signup.addEventListener('click', (event) => {
+        event.preventDefault();
+        if (myVal()) {
+            const firstName = fnameInput.value;
+            const lastName = lnameInput.value;
+            const phone = mobileInput.value;
+            const email = emailInput.value;
+            const username = userInput.value;
+            const password = passwordInput.value;
+
+            showSignupPopup(firstName, lastName, username, email, phone, password);
+        }
+    });
+
+
+
     // ... existing code ...
     function showLoginPopup(username, password) {
-    const popupContent = `
+        const popupContent = `
+        <figure class="w-full h-fit flex justify-center items-center">
+                <img class="w-[50%] h-[50%]" src="img/wlc.gif" alt="">
+        </figure>
         <h2 class='w-full text-center text-2xl font-bold'>Welcome dear ${username}, You have successfully logged in!</h2>
-        <section class=' w-[50%] h-[50%] flex flex-wrap items-center justify-start *:items-center *:justify-center '>
-            <p class='w-full text-center text-xl font-bold'>User Name: ${username}</p>
-            <p class='w-full text-center text-xl font-bold'>Password: ${password}</p>
+        <section class='row w-full h-fit flex flex-wrap items-center justify-center *:items-center *:justify-center p-[10%]'>
+            <p class='w-full h-full  text-center text-xl font-bold flex justify-center items-center'>User Name: ${username}</p>
+            <p class='w-full h-full  text-center text-xl font-bold flex justify-center items-center'>Password: ${password}</p>
         </section>
         <span id="cl0selogin" class="cursor-pointer bg-white !text-black absolute top-2 right-2 text-[15px] w-[20px] h-[20px] flex justify-center items-center text-center rounded-full">X</span>
     `;
 
-    const popupElement = document.querySelector('.popuplogin');
-    popupElement.querySelector('section').innerHTML = popupContent;
-    popupElement.classList.remove('hidelogin');
+        const popupElement = document.querySelector('.popuplogin');
+        popupElement.querySelector('section').innerHTML = popupContent;
+        popupElement.classList.remove('hidelogin');
 
-    document.getElementById('blur-overlaylogin').classList.remove('hidden');
-}
+        document.getElementById('blur-overlaylogin').classList.remove('hidden');
+    }
 
-function hideLoginPopup() {
-    const popupElement = document.querySelector('.popuplogin');
-    popupElement.classList.add('hidelogin');
-    document.getElementById('blur-overlaylogin').classList.add('hidden');
-}
+    function hideLoginPopup() {
+        const popupElement = document.querySelector('.popuplogin');
+        popupElement.classList.add('hidelogin');
+        document.getElementById('blur-overlaylogin').classList.add('hidden');
+    }
 
 
-document.addEventListener('click', function(event) {
-    if (event.target && event.target.id === 'cl0selogin') {
+    document.addEventListener('click', function (event) {
+        if (event.target && event.target.id === 'cl0selogin') {
+            hideLoginPopup();
+        }
+    });
+
+    loginsubmit.addEventListener('click', (event) => {
+        event.preventDefault();
+        if (myLoginVal(event)) {
+            const username = userLoginInput.value;
+            const password = passLoginInput.value;
+            showLoginPopup(username, password);
+        }
+    });
+
+    // ا
+    window.addEventListener('load', () => {
         hideLoginPopup();
-    }
-});
-
-loginsubmit.addEventListener('click', (event) => {
-    event.preventDefault();
-    if (myLoginVal(event)) {
-        const username = userLoginInput.value;
-        const password = passLoginInput.value;
-        showLoginPopup(username, password);
-    }
-});
-
-// ا
-window.addEventListener('load', () => {
-    hideLoginPopup();
-    hideSignupPopup();
-});
+        hideSignupPopup();
+    });
 
 
 </script>
