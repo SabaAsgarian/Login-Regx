@@ -14,7 +14,7 @@
 </head>
 
 <body class="text-[#fff] bg-[#00cc8f] w-full h-[120vh] xl:overflow-hidden  capitalize">
-    <section class="row w-full h-[100vh]">
+    <section class="row w-full h-[120vh]">
         <div class="row w-[100%] h-[40%] xl:w-[40%] xl:h-[120vh] bg-[#029e71]">
             <div class="row w-full h-[20%] flex  items-center ml-[20%]">
                 <i class=" icon-star-6 text-[28px] rotate-[20deg]"> </i>
@@ -23,7 +23,7 @@
             <figure class="w-full h-[80%] relative">
                 <img class="ml-[20%] h-[100%] xl:scale-125" src="img/undraw_new_ideas_jdea.svg" alt="">
                 <figcaption
-                    class="absolute top-0 left-[40%] md:left-[30%] xl:top-[10%] w-[30%] xl:w-auto *:text-[8px] xl:left-[70%] *:xl:text-[13px] *:text-[#d65252] font-mb font-extrabold">
+                    class="absolute top-0 left-[40%] md:left-[30%] xl:top-[10%] w-[30%] xl:w-auto *:text-[10px] xl:left-[70%] *:xl:text-[13px] *:text-[#d65252] font-mb font-extrabold">
 
                     <span class="fname w-full" style="display: none;">(Your FirstName is Incorrect!!It should contain
                         more
@@ -83,7 +83,7 @@
                 <p class="font-mr font-extralight w-full">Enter your details below</p>
                 <input type="text" placeholder="UserName" id="userlogin" name="userlogin"
                     class="w-[40%] ml-[7%] *:border-l-1 *:border-t-1 border-[#ffffff4d]">
-                <input type="text" placeholder="Password" name="Passwordlogin" id="passlogin"
+                <input type="password" placeholder="Password" name="Passwordlogin" id="passlogin"
                     class="w-[40%] ml-[10%] *:border-l-1 *:border-t-1 border-[#ffffff4d]">
                 <br>
                 <div class="row w-full flex justify-center items-center *:bg-[#ffffff33]">
@@ -104,7 +104,7 @@
             <div id="blur-overlay" class="fixed inset-0 backdrop-blur-3xl bg-black bg-opacity-25 hidden"></div>
 
             <div
-                class="popup hide justify-center items-center flex w-[80%] h-fit lg:w-[50%] lg:h-fit *:text-center bg-[#00cc8f] bg-bg bg-no-repeat bg-center *:text-black">
+                class="popup hide justify-center items-center flex w-[80%] h-full lg:w-[50%] lg:h-[90%] *:text-center bg-[#00cc8f] bg-bg bg-no-repeat bg-center *:text-black">
                 <section class="flex w-full h-full border-white border-[5px] rounded-lg row">
                     <span
                         class="cursor-pointer bg-white !text-black absolute bottom-0 right-[10%] md:top-0 md:right-[20%] text-[15px] w-[20px] h-[20px] md:w-[25px] md:h-[25px] flex justify-center items-center text-center rounded-full"
@@ -133,7 +133,7 @@
             <div id="blur-overlaylogin" class="fixed inset-0 backdrop-blur-3xl bg-black bg-opacity-20 hidden"></div>
 
             <div
-                class="popuplogin hidelogin justify-center items-center flex w-[80%] h-fit lg:w-[50%] lg:h-fit *:text-center bg-[#00cc8f] bg-bg bg-no-repeat bg-center *:text-black">
+                class="popuplogin hidelogin justify-center items-center flex w-[80%] h-full lg:w-[50%] lg:h-[90%] *:text-center bg-[#00cc8f] bg-bg bg-no-repeat bg-center *:text-black">
                 <section class="flex w-full h-full border-white border-[5px] rounded-lg row">
                     <span
                         class="cursor-pointer bg-white !text-black absolute bottom-0 right-[10%] md:top-0 md:right-[20%] text-[15px] w-[20px] h-[20px] md:w-[25px] md:h-[25px] flex justify-center items-center text-center rounded-full"
@@ -154,6 +154,23 @@
             </div>
         </div>
     </section>
+    <footer class="w-full relative">
+         <!-- my signature -->
+         
+         <figure class=" group w-[130px] h-[130px] flex flex-wrap fixed z-10 left-[10px] bottom-[40px] rounded-full cursor-pointer ">
+            <p class="w-full text-center text-[15px]">Saba Asgarian</p>
+            <img class="bg-[#4ade80] relative z-10 w-full h-full object-cover rounded-full" src="img/me.png" alt="">
+            <div class="group-hover:right-[-41px] group-hover:opacity-100 group-hover:visible w-[40px] h-[90px] absolute top-0 right-[70px] opacity-0 invisible duration-[.4s] ease-linear hover:right-[-45px] hover:opacity-100 hover:visible">
+                <a class="flex items-center justify-center w-full h-[40px] rounded-full bg-[#4ade80] text-white flex-[18px] mb-[5px] duration-[.3s] ease-linear relative hover:bg-[#4ade80] hover:text-black" href="https://github.com/SabaAsgarian" target="_blank"><i class="icon-github-circled-1"></i></a>
+                <a class="flex items-center justify-center w-full h-[40px] rounded-full bg-[#4ade80] text-white flex-[18px] mb-[5px] duration-[.3s] ease-linear relative hover:bg-[#4ade80] hover:text-black" href="https://www.linkedin.com/in/saba-asgarian-69161088?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><i class=" icon-linkedin-1"></i></a>
+                <a class="flex items-center justify-center w-full h-[40px] rounded-full bg-[#4ade80] text-white flex-[18px] mb-[5px] duration-[.3s] ease-linear relative hover:bg-[#4ade80] hover:text-black" href="https://www.instagram.com/saba_asgarian_web?igsh=M2Z2dTU3cHFmeW1o&utm_source=qr" target="_blank"><i class="icon-instagram-2"></i></a>
+                <a class="flex items-center justify-center w-full h-[40px] rounded-full bg-[#4ade80] text-white flex-[18px] mb-[5px] duration-[.3s] ease-linear relative hover:bg-[#4ade80] hover:text-black" href="mailto:computer.sabaa@gmail.com" target="_blank"><i class="icon-mail"></i></a>
+                                        
+            </div>
+            
+        </figure>
+        <!-- my signature -->
+    </footer>
 </body>
 <script>
     const fnameInput = document.getElementById('fname');
