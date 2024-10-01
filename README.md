@@ -21,7 +21,7 @@ Login-Regx
 
 - Created - 2024-08-20
 
-- Technologies Used - Html , Css , Tailwind , JavaScript
+- Technologies Used - Html , Css , Tailwind ,JavaScript
 
 - Hooks Used : useState 
 
