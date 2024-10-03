@@ -1,6 +1,6 @@
 # Login-Regx
 Login-Regx
-regular expression
+regular expressions.
 
 
 
